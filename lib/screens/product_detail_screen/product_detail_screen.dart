@@ -1,8 +1,14 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoes_shop/models/product.dart';
 import 'package:shoes_shop/screens/product_detail_screen/components/colors.dart';
 import 'package:shoes_shop/screens/product_detail_screen/components/images.dart';
+import 'package:shoes_shop/screens/product_detail_screen/components/reviews.dart';
 
 import 'components/detail_app_bar.dart';
 
@@ -21,22 +27,41 @@ class ProductDetailScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 10),
-              DetailScrAppBar(
+              DetailScreenImages(
+                images: product.images,
                 price: product.price,
                 name: product.name,
               ),
-              const SizedBox(height: 10),
-              DetailScreenImages(images: product.images),
               const SizedBox(height: 20),
-              SizedBox(
+              ProductAvaliableColors(colors: product.avaliableColors),
+              Reviews(
+                totalRating: product.totalRating,
+                reviews: product.reviews,
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                height: 50,
                 width: double.infinity,
-                child: Column(
-                  children: [
-                    ProductAvaliableColors(colors: product.avaliableColors),
-                  ],
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: const LinearGradient(
+                    colors: [
+                      Colors.red,
+                      Colors.purple,
+                    ],
+                  ),
+                ),
+                child: const Center(
+                  child: Text(
+                    'ORDER NOW',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ),
+              const SizedBox(height: 20),
             ],
           ),
         ),

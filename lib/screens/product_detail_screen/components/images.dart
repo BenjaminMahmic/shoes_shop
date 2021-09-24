@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
+import 'detail_app_bar.dart';
+
 class DetailScreenImages extends StatefulWidget {
+  final String name;
+  final double price;
   final List<String> images;
 
   const DetailScreenImages({
     Key? key,
+    required this.name,
+    required this.price,
     required this.images,
   }) : super(key: key);
 
@@ -19,16 +25,29 @@ class _DetailScreenImagesState extends State<DetailScreenImages> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 250,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(
-                widget.images[currentIndex],
+        Stack(
+          children: [
+            Container(
+              height: 250,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    widget.images[currentIndex],
+                  ),
+                  fit: BoxFit.cover,
+                ),
               ),
-              fit: BoxFit.cover,
             ),
-          ),
+            Positioned(
+              top: 10,
+              left: 0,
+              right: 0,
+              child: DetailScrAppBar(
+                price: widget.price,
+                name: widget.name,
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 10),
         SizedBox(

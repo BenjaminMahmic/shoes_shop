@@ -19,10 +19,47 @@ String _pumaLogo = 'assets/svg/puma.svg';
 String _userImageUrl =
     'https://img.freepik.com/free-photo/portrait-young-bearded-hipster-man-looking-camera-taking-selfie-against-yellow_58466-11455.jpg?size=626&ext=jpg';
 String _reviewContent =
-    'I am quite happy with this product and would recommend it to everyone.';
+    'I am quite happy with this product and would recommend it to everyone. I am quite happy with this product and would recommend it to everyone. I am quite happy with this product and would recommend it to everyone.';
 
 List<Product> dummyData = [
-  //nike
+  Product(
+    name: 'NMD_R1 SHOES',
+    price: 140.00,
+    totalRating: 5.0,
+    avaliableColors: _dummyColors,
+    images: [
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/414a0af449a94f17b0eead8f00ebaea2_9366/NMD_R1_Shoes_Beige_GZ8025_01_standard.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/aaa48ab17a614954990ead8f00ebc345_9366/NMD_R1_Shoes_Beige_GZ8025_02_standard_hover.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ada2de65b7fa474a9b13ad8f00ebcc82_9366/NMD_R1_Shoes_Beige_GZ8025_03_standard.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b9905fb1a9bb43ee9c6ead8f00ebd481_9366/NMD_R1_Shoes_Beige_GZ8025_04_standard.jpg',
+    ],
+    logoUrl: _addidasLogo,
+    reviews: [
+      Review(
+        userName: 'User Name',
+        userImageUrl: _userImageUrl,
+        rate: 4.5,
+        date: DateTime.now(),
+        reviewContent: _reviewContent,
+      ),
+      Review(
+        userName: 'User Name',
+        userImageUrl: _userImageUrl,
+        rate: 5.0,
+        date: DateTime.now(),
+        reviewContent: _reviewContent,
+      ),
+      Review(
+        userName: 'User Name',
+        userImageUrl: _userImageUrl,
+        rate: 3.2,
+        date: DateTime.now(),
+        reviewContent: _reviewContent,
+      ),
+    ],
+    isFavorite: false,
+    brand: ShoesBrand.addidas,
+  ),
   Product(
     name: 'Nike Air Zoom Pegasus 38',
     price: 124.99,
@@ -78,45 +115,6 @@ List<Product> dummyData = [
     isFavorite: false,
     brand: ShoesBrand.nike,
   ),
-  //addidas
-  Product(
-    name: 'NMD_R1 SHOES',
-    price: 140.00,
-    totalRating: 5.0,
-    avaliableColors: _dummyColors,
-    images: [
-      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/414a0af449a94f17b0eead8f00ebaea2_9366/NMD_R1_Shoes_Beige_GZ8025_01_standard.jpg',
-      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/aaa48ab17a614954990ead8f00ebc345_9366/NMD_R1_Shoes_Beige_GZ8025_02_standard_hover.jpg',
-      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ada2de65b7fa474a9b13ad8f00ebcc82_9366/NMD_R1_Shoes_Beige_GZ8025_03_standard.jpg',
-      'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b9905fb1a9bb43ee9c6ead8f00ebd481_9366/NMD_R1_Shoes_Beige_GZ8025_04_standard.jpg',
-    ],
-    logoUrl: _addidasLogo,
-    reviews: [
-      Review(
-        userName: 'User Name',
-        userImageUrl: _userImageUrl,
-        rate: 4.5,
-        date: DateTime.now(),
-        reviewContent: _reviewContent,
-      ),
-      Review(
-        userName: 'User Name',
-        userImageUrl: _userImageUrl,
-        rate: 5.0,
-        date: DateTime.now(),
-        reviewContent: _reviewContent,
-      ),
-      Review(
-        userName: 'User Name',
-        userImageUrl: _userImageUrl,
-        rate: 3.2,
-        date: DateTime.now(),
-        reviewContent: _reviewContent,
-      ),
-    ],
-    isFavorite: false,
-    brand: ShoesBrand.addidas,
-  ),
   Product(
     name: 'NMD_R1 SHOES',
     price: 140.00,
@@ -155,31 +153,6 @@ List<Product> dummyData = [
     isFavorite: false,
     brand: ShoesBrand.addidas,
   ),
-  //reebok
-  Product(
-    name: 'National Geographic Nano X1 Adventure Shoes',
-    price: 140.00,
-    totalRating: 4.1,
-    avaliableColors: _dummyColors,
-    images: [
-      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/f5b6cc850afd49c8bba5ad8200763e8d_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_01_standard.jpg',
-      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/63472ca1be0e419d8aa8ad8200760ecd_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_03_standard.jpg',
-      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b6c3ce884e144cec96a9ad820076256f_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_04_standard.jpg',
-      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/0e1ced16c30545688986ad8200762d5d_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_05_standard.jpg',
-    ],
-    logoUrl: _reebokLogo,
-    reviews: [
-      Review(
-        userName: 'User Name',
-        userImageUrl: _userImageUrl,
-        rate: 2.8,
-        date: DateTime.now(),
-        reviewContent: _reviewContent,
-      ),
-    ],
-    isFavorite: false,
-    brand: ShoesBrand.reebok,
-  ),
   Product(
     name: 'National Geographic Floatride Energy 3 Adventure Men\'s Shoes',
     price: 120.00,
@@ -211,7 +184,30 @@ List<Product> dummyData = [
     isFavorite: true,
     brand: ShoesBrand.reebok,
   ),
-  //puma
+  Product(
+    name: 'National Geographic Nano X1 Adventure Shoes',
+    price: 140.00,
+    totalRating: 4.1,
+    avaliableColors: _dummyColors,
+    images: [
+      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/f5b6cc850afd49c8bba5ad8200763e8d_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_01_standard.jpg',
+      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/63472ca1be0e419d8aa8ad8200760ecd_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_03_standard.jpg',
+      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b6c3ce884e144cec96a9ad820076256f_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_04_standard.jpg',
+      'https://assets.reebok.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/0e1ced16c30545688986ad8200762d5d_9366/National_Geographic_Nano_X1_Adventure_Shoes_Beige_GX3698_05_standard.jpg',
+    ],
+    logoUrl: _reebokLogo,
+    reviews: [
+      Review(
+        userName: 'User Name',
+        userImageUrl: _userImageUrl,
+        rate: 2.8,
+        date: DateTime.now(),
+        reviewContent: _reviewContent,
+      ),
+    ],
+    isFavorite: false,
+    brand: ShoesBrand.reebok,
+  ),
   Product(
     name: 'Super Liga OG Retro Men\'s Sneakers',
     price: 70.00,
