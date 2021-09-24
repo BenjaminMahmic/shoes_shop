@@ -10,7 +10,7 @@ class Product {
   final List<String> images;
   final String logoUrl;
   final List<Review> reviews;
-  final bool isFavorite;
+  bool isFavorite;
   final ShoesBrand brand;
 
   Product({

@@ -51,39 +51,46 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: screensList[currentIndex],
-      bottomNavigationBar: DotNavigationBar(
-        backgroundColor: Colors.black,
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        currentIndex: currentIndex,
-        dotIndicatorColor: Colors.grey,
-        unselectedItemColor: Colors.grey,
-        onTap: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
-        items: [
-          DotNavigationBarItem(
-            icon: const Icon(Icons.home_rounded),
-            selectedColor: Colors.white,
+      bottomNavigationBar: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: DotNavigationBar(
+            marginR: const EdgeInsets.symmetric(horizontal: 15),
+            backgroundColor: Colors.black,
+            margin: const EdgeInsets.symmetric(horizontal: 15),
+            currentIndex: currentIndex,
+            dotIndicatorColor: Colors.transparent,
+            unselectedItemColor: Colors.grey,
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
+            items: [
+              DotNavigationBarItem(
+                icon: const Icon(Icons.home_rounded),
+                selectedColor: Colors.white,
+              ),
+              DotNavigationBarItem(
+                icon: const Icon(Icons.search),
+                selectedColor: Colors.white,
+              ),
+              DotNavigationBarItem(
+                icon: const Icon(Icons.add_circle_outline_sharp),
+                selectedColor: Colors.white,
+              ),
+              DotNavigationBarItem(
+                icon: const Icon(Icons.favorite_border_rounded),
+                selectedColor: Colors.white,
+              ),
+              DotNavigationBarItem(
+                icon: const Icon(Icons.person_outline_rounded),
+                selectedColor: Colors.white,
+              ),
+            ],
           ),
-          DotNavigationBarItem(
-            icon: const Icon(Icons.search),
-            selectedColor: Colors.white,
-          ),
-          DotNavigationBarItem(
-            icon: const Icon(Icons.add_circle_outline_sharp),
-            selectedColor: Colors.white,
-          ),
-          DotNavigationBarItem(
-            icon: const Icon(Icons.favorite_border_rounded),
-            selectedColor: Colors.white,
-          ),
-          DotNavigationBarItem(
-            icon: const Icon(Icons.person_outline_rounded),
-            selectedColor: Colors.white,
-          ),
-        ],
+        ),
       ),
     );
   }
