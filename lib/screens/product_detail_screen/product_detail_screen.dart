@@ -4,13 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoes_shop/models/product.dart';
 import 'package:shoes_shop/screens/product_detail_screen/components/colors.dart';
 import 'package:shoes_shop/screens/product_detail_screen/components/images.dart';
 import 'package:shoes_shop/screens/product_detail_screen/components/reviews.dart';
-
-import 'components/detail_app_bar.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   final Product product;

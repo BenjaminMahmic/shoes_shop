@@ -4,7 +4,6 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoes_shop/models/product.dart';
-import 'package:shoes_shop/screens/product_detail_screen/components/images.dart';
 import 'package:shoes_shop/screens/product_detail_screen/product_detail_screen.dart';
 
 class GridCard extends StatefulWidget {
