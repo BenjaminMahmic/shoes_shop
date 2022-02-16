@@ -1,4 +1,3 @@
-# shoes_shop
+Shoes shop UI 
 
-![Screenshot_1](https://user-images.githubusercontent.com/89051381/134748916-508acbef-e63b-406c-b3d8-3065ab612f53.jpg)
-
+![3](https://user-images.githubusercontent.com/89051381/154176241-8210cea9-3d4a-459f-b5ab-6586e1ee4574.jpeg)
